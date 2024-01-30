@@ -23,7 +23,6 @@ let loadingInterval = setInterval(() => {
             loadingBar.style.opacity = '1'; // Reset the opacity of the loading bar
 
             introText.textContent = 'Hi there!';
-            introText.style.display = 'block'; // Show the intro text
             introText.style.opacity = '0'; // Set the opacity of the intro text to 0
             setTimeout(function() {
                 introText.style.opacity = '1'; // Fade in the intro text

@@ -3,6 +3,17 @@ console.log("Welcome to my resume website!");
 let loadingBar = document.getElementById('loading-bar');
 let introText = document.getElementById('intro-text');
 let intro = document.getElementById('intro');
+let percentage = 0;
+let percentageElement = document.getElementById('percentage');
+
+let loadingInterval = setInterval(() => {
+    percentage++;
+    percentageElement.textContent = percentage + '%';
+
+    if (percentage >= 100) {
+        clearInterval(loadingInterval);
+    }
+}, 100);
 
 let width = 0;
 let loading = setInterval(function() {

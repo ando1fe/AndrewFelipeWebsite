@@ -3,23 +3,24 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: white;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    z-index: 1000; /* Ensure it's above all other content */
+    align-items: center;
+    background-color: #fff; /* Change to match your site's color scheme */
+    z-index: 1000;
+}
+
+#loading-text {
+    margin-bottom: 20px;
+    font-size: 20px; /* Adjust as needed */
 }
 
 #loading-bar {
+    width: 80%; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
     background-color: #000; /* Change to your desired color */
-    height: 5px; /* Adjust as needed */
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
 #intro-text {

@@ -7,7 +7,7 @@ let percentage = 0;
 let percentageElement = document.getElementById('percentage');
 
 let loadingInterval = setInterval(() => {
-    percentage += 5; // Increase the percentage by 5 instead of 1
+    percentage += 1; // Increase the percentage by 1
     percentageElement.textContent = percentage + '%';
     loadingBar.style.width = percentage + '%';
 
@@ -28,6 +28,6 @@ let loadingInterval = setInterval(() => {
                 introText.style.opacity = '1'; // Fade in the intro text
                 introText.textContent = 'Welcome to my resume! Scroll to learn more....';
             }, 2000);
-        }, 2000); // Change the delay to 2000 milliseconds (2 seconds)
+        }, 4000); // Change the delay to 4000 milliseconds (4 seconds)
     }
-}, 20); // Change the interval duration to 20 milliseconds
+}, 40); // Change the interval duration to 40 milliseconds

@@ -26,6 +26,7 @@ let loading = setInterval(function() {
     } else {
         width++;
         loadingBar.style.width = width + '%';
+        loadingBar.style.height = '10px'; // Set the desired height of the loading bar
     }
 }, 50);
 

@@ -1,4 +1,5 @@
 console.log("Welcome to my resume website!");
+
 // script.js
 let loadingBar = document.getElementById('loading-bar');
 let introText = document.getElementById('intro-text');
@@ -12,10 +13,19 @@ let loadingInterval = setInterval(() => {
 
     if (percentage >= 100) {
         clearInterval(loadingInterval);
-        introText.style.display = 'block'; // Show the intro text after loading is complete
-        introText.textContent = 'Hi there!';
+        introText.style.opacity = '0'; // Fade out the intro text
+        loadingBar.style.opacity = '0'; // Fade out the loading bar
+
         setTimeout(function() {
-            introText.textContent = 'Welcome to my resume! Scroll to learn more....';
-        }, 2000);
+            introText.style.display = 'none'; // Hide the intro text after fading out
+            loadingBar.style.display = 'none'; // Hide the loading bar after fading out
+            introText.style.opacity = '1'; // Reset the opacity of the intro text
+            loadingBar.style.opacity = '1'; // Reset the opacity of the loading bar
+
+            introText.textContent = 'Hi there!';
+            setTimeout(function() {
+                introText.textContent = 'Welcome to my resume! Scroll to learn more....';
+            }, 2000);
+        }, 1000);
     }
-}, 100);
+}, 25);

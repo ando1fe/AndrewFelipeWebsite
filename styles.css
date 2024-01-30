@@ -15,12 +15,14 @@
 #loading-text {
     margin-bottom: 20px;
     font-size: 20px; /* Adjust as needed */
+    text-align: center;
 }
 
 #loading-bar {
     width: 80%; /* Adjust as needed */
     height: 20px; /* Adjust as needed */
     background-color: #000; /* Change to your desired color */
+    z-index: 2000; /* Adjust as needed */
 }
 
 #intro-text {

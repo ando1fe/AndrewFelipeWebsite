@@ -47,5 +47,11 @@ let loadingInterval = setInterval(() => {
                 arrow.classList.add('fade-in');
             }, 2000); // Delay for the 'Welcome to my resume!' text and arrow
         }, 2000); // Delay for the 'Hi there!' text fade-out
+        
+        setTimeout(function () {
+            // Fade out the loading bar and text
+            loadingBar.classList.add('fade-out');
+            loadingText.classList.add('fade-out');
+        }, 1000); // Adjust the delay as needed
     }
 }, 100); // Adjust the interval as needed

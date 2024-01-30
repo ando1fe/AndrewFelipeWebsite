@@ -13,13 +13,10 @@ let loadingInterval = setInterval(() => {
 
     if (percentage >= 100) {
         clearInterval(loadingInterval);
-        introText.style.opacity = '0'; // Fade out the intro text
         loadingBar.style.opacity = '0'; // Fade out the loading bar
 
         setTimeout(function() {
-            introText.style.display = 'none'; // Hide the intro text after fading out
             loadingBar.style.display = 'none'; // Hide the loading bar after fading out
-            introText.style.opacity = '1'; // Reset the opacity of the intro text
             loadingBar.style.opacity = '1'; // Reset the opacity of the loading bar
 
             introText.textContent = 'Hi there!';

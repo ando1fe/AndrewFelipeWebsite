@@ -20,7 +20,7 @@
 
 #loading-bar {
     width: 80%; /* Adjust as needed */
-    height: 20px; /* Adjust as needed */
+    height: 20px !important; /* Adjust as needed */
     background-color: #000; /* Change to your desired color */
     z-index: 2000; /* Adjust as needed */
 }

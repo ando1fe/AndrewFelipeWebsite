@@ -38,7 +38,11 @@
 
 /* Apply the bounce animation to the arrow */
 #arrow {
+    width: 10%; /* Adjust as needed */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    opacity: 0;
     animation: bounce 2s infinite;
+    transition: opacity 2s;
 }
 
 /* Define classes for the fade in and fade out effects */

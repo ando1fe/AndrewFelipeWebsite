@@ -34,6 +34,10 @@ let loadingInterval = setInterval(() => {
                 var introText = document.getElementById('intro-text');
                 var arrow = document.getElementById('arrow');
 
+                // Remove the 'Hi there!' text and fade-out class
+                introText.textContent = '';
+                introText.classList.remove('fade-out');
+
                 // Add the "Welcome to my resume!" text and fade it in
                 introText.textContent = 'Welcome to my resume! Scroll to learn more....';
                 introText.classList.add('fade-in');
@@ -41,7 +45,7 @@ let loadingInterval = setInterval(() => {
                 // Display and fade in the arrow at the same time
                 arrow.style.display = 'block';
                 arrow.classList.add('fade-in');
-            }, 2000);
-        }, 4000); // Change the delay to 4000 milliseconds (4 seconds)
+            }, 2000); // Delay for the 'Welcome to my resume!' text and arrow
+        }, 2000); // Delay for the 'Hi there!' text fade-out
     }
 }, 100); // Adjust the interval as needed

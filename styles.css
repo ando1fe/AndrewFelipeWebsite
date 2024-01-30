@@ -13,10 +13,13 @@
 }
 
 #loading-bar {
+    background-color: #000; /* Change to your desired color */
+    height: 5px; /* Adjust as needed */
     width: 0;
-    height: 5px;
-    background-color: black;
-    transition: width 2s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 #intro-text {

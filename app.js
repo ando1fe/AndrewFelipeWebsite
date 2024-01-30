@@ -12,6 +12,7 @@ let loadingInterval = setInterval(() => {
 
     if (percentage >= 100) {
         clearInterval(loadingInterval);
+        introText.style.display = 'block'; // Show the intro text after loading is complete
     }
 }, 100);
 
@@ -27,11 +28,6 @@ let loading = setInterval(function() {
         width++;
         loadingBar.style.width = width + '%';
         loadingBar.style.height = '10px'; // Set the desired height of the loading bar
+        loadingBar.style.backgroundColor = 'black'; // Set the loading bar color to black
     }
-}, 50);
-
-window.addEventListener('scroll', function() {
-    let scrollPercent = Math.max(window.pageYOffset / (document.documentElement.offsetHeight - window.innerHeight), 0);
-    intro.style.opacity = 1 - scrollPercent;
-    intro.style.transform = 'scale(' + (1 - scrollPercent) + ')';
-});
+}, 100); // Set the loading bar speed to match the percentage speed

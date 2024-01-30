@@ -14,21 +14,25 @@ let loadingInterval = setInterval(() => {
 
     if (percentage >= 100) {
         clearInterval(loadingInterval);
-        loadingBar.style.opacity = '0'; // Fade out the loading bar
-        loadingText.style.opacity = '0'; // Fade out the "Loading in..." text
+        // Start the fade out effect
+        loadingBar.classList.add('fade-out');
+        loadingText.classList.add('fade-out');
 
-        setTimeout(function() {
-            loadingBar.style.display = 'none'; // Hide the loading bar after fading out
-            loadingText.style.display = 'none'; // Hide the "Loading in..." text
-            loadingBar.style.opacity = '1'; // Reset the opacity of the loading bar
-            loadingText.style.opacity = '1'; // Reset the opacity of the "Loading in..." text
+        setTimeout(function () {
+            loadingBar.style.display = 'none';
+            loadingText.style.display = 'none';
 
+            // Reset the opacity
+            loadingBar.style.opacity = '1';
+            loadingText.style.opacity = '1';
+
+            // Start the fade in effect for the intro text
             introText.textContent = 'Hi there!';
-            introText.style.opacity = '0'; // Set the opacity of the intro text to 0
-            setTimeout(function() {
-                introText.style.opacity = '1'; // Fade in the intro text
+            introText.classList.add('fade-in');
+
+            setTimeout(function () {
                 introText.textContent = 'Welcome to my resume! Scroll to learn more....';
-                arrow.style.display = 'block'; // Show the bouncing arrow
+                arrow.style.display = 'block';
             }, 2000);
         }, 4000); // Change the delay to 4000 milliseconds (4 seconds)
     }
